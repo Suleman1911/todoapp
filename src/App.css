@@ -1,0 +1,84 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to right, #e3f6f5, #d0f4de);
+  border-radius: 5px;
+  box-shadow: 0 12px 50px rgba(0, 0, 0, 0.08);
+  margin-top: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 900px;
+}
+
+.input-area {
+  display: flex;
+  align-items: center;
+  margin: 10px auto;
+  gap: 10px;
+  width: fit-content;
+}
+
+.input-field {
+  width: 750px;
+}
+
+.input-field
+  .MuiOutlinedInput-root.Mui-focused
+  .MuiOutlinedInput-notchedOutline {
+  border-color: #4bb987;
+}
+
+.todos-container,
+.complete-container {
+  display: flex;
+  flex-direction: column;
+  width: 430px;
+  height: 80vh;
+  border: 1px solid #4bb987;
+  box-shadow: 0 0 0 2px rgba(75, 185, 135, 0.2);
+  margin: 5px;
+  border-radius: 5px;
+  padding: 16px;
+  overflow-y: auto;
+}
+
+.content-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+.section-title {
+  margin: 5px;
+  text-align: center;
+  color: #2e4e3f;
+}
+
+.task-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin: 10px auto;
+  padding: 10- px 5px;
+  border: 1px solid rgba(133, 186, 146, 0.333);
+  font-size: 18px;
+}
+
+.task-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.task-actions {
+  display: flex;
+  align-items: center;
+}
+
+.task-actions-gap {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}

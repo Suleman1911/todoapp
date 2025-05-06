@@ -1,18 +1,18 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
-import Completetask from "../Task/Completetask";
+import CompleteTask from "../Task/CompleteTask";
 
-const Complete = ({ completedTodos, moveBackToTodo }) => {
+const Complete = ({ completedTodos, movebackToTodo }) => {
   return (
     <Box className="complete-container">
       <Typography variant="h4" className="section-title">
         Completed Todos
       </Typography>
       {completedTodos.map(todo => (
-        <Completetask
+        <CompleteTask
           key={todo.id} 
           todo={todo}
-          moveBackToTodo={moveBackToTodo}
+          moveBackToTodo={movebackToTodo}
         />
       ))}
     </Box>

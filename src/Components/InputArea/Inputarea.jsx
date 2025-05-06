@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Box, Button, TextField } from "@mui/material";
 
-const Inputarea = ({ addTodo, editingTodo }) => {
+const InputArea = ({ addTodo, editingTodo }) => {
   const [title, setTitle] = useState("");
   const [hasChanges, sethasChanges] = useState("");
   
@@ -11,7 +11,7 @@ const Inputarea = ({ addTodo, editingTodo }) => {
     setTitle("");
   };
 
-  const handleTitleChange = (e)=>{
+  const handletitleChange = (e)=>{
     const newTitle = e.target.value;
     setTitle(newTitle)
     if(editingTodo){
@@ -34,7 +34,7 @@ const Inputarea = ({ addTodo, editingTodo }) => {
       <TextField
         className="input-field"
         value={title || ''}
-        onChange={handleTitleChange}
+        onChange={handletitleChange}
         variant="outlined"
         placeholder="Todo's Title"
         size="small"
@@ -51,4 +51,4 @@ const Inputarea = ({ addTodo, editingTodo }) => {
   );
 };
 
-export default Inputarea;
+export default InputArea;

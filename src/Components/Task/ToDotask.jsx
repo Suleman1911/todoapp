@@ -3,7 +3,7 @@ import { FaRegEdit } from "react-icons/fa";
 import { MdDelete, MdDone } from "react-icons/md";
 import { Box, IconButton, Typography } from "@mui/material";
 
-const ToDotask = ({ todo, deleteTodo, editTodo, markCompleted }) => {
+const TodoTask = ({ todo, deleteTodo, editTodo, markCompleted }) => {
   return (
     <Box className="task-box">
       <Typography variant="body1" component="p" className="task-text">
@@ -27,4 +27,4 @@ const ToDotask = ({ todo, deleteTodo, editTodo, markCompleted }) => {
   );
 };
 
-export default ToDotask;
+export default TodoTask;

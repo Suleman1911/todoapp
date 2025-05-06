@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
-import ToDotask from "../Task/ToDotask";
+import TodoTask from "../Task/TodoTask";
 
 const Todos = ({ todos, deleteTodo, editTodo, markCompleted }) => {
   return (
@@ -9,7 +9,7 @@ const Todos = ({ todos, deleteTodo, editTodo, markCompleted }) => {
         My Todos
       </Typography>
       {todos.map((todo) => (
-        <ToDotask
+        <TodoTask
           key={todo.id}
           todo={todo}
           deleteTodo={deleteTodo}

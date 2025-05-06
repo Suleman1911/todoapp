@@ -1,8 +1,8 @@
 import React from "react";
-import { FaRegEdit } from "react-icons/fa";
+import { RiArrowGoBackFill } from "react-icons/ri";
 import { Box, IconButton, Typography } from "@mui/material";
 
-const Completetask = ({ todo, moveBackToTodo }) => {
+const CompleteTask = ({ todo, moveBackToTodo }) => {
   return (
     <Box className="task-box">
       <Typography variant="body1" component="p" className="task-text">
@@ -11,11 +11,11 @@ const Completetask = ({ todo, moveBackToTodo }) => {
       </Typography>
       <Box className="task-actions-gap">
         <IconButton onClick={() => moveBackToTodo(todo.id)}>
-          <FaRegEdit />
+          <RiArrowGoBackFill />
         </IconButton>
       </Box>
     </Box>
   );
 };
 
-export default Completetask;
+export default CompleteTask;

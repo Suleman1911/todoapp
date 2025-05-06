@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Box, Container } from "@mui/material";
-import Inputarea from "./Components/InputArea/Inputarea";
+import InputArea from "./Components/InputArea/InputArea";
 import Todos from "./Components/Todos/Todos";
 import Complete from "./Components/Todos/Complete";
 import "./App.css";
@@ -10,19 +10,19 @@ import toast, { Toaster } from "react-hot-toast";
 function App() {
   const [todos, setTodos] = useState([]);
   const [editingTodo, setEditingTodo] = useState(null);
-  
+
 
   const now = format(new Date(), "dd/MM/yyyy hh:mm:ss a");
 
   const addTodo = (title) => {
     if (!title.trim()) return;
-  
-    const ExistTitle = todos.some(todo => todo.title.toLowerCase() === title.trim().toLowerCase());
-    if (ExistTitle) {
+
+    const existTitle = todos.some(todo => todo.title.toLowerCase() === title.trim().toLowerCase());
+    if (existTitle) {
       toast.error("Task already exists")
       return;
     }
-  
+
     if (editingTodo) {
       const updatedTodos = todos.map((todo) =>
         todo.id === editingTodo.id
@@ -33,7 +33,7 @@ function App() {
       setEditingTodo(null);
       return;
     }
-  
+
     const newTodo = {
       id: Date.now(),
       title: title.trim(),
@@ -42,7 +42,7 @@ function App() {
     };
     setTodos([...todos, newTodo]);
   };
-  
+
 
   const deleteTodo = (id) => {
     const updatedList = todos.filter((todo) => todo.id !== id)
@@ -66,7 +66,7 @@ function App() {
     setTodos(updatedList);
   };
 
-  const moveBackToTodo = (id) => {
+  const movebackToTodo = (id) => {
     const updatedList = todos.map((todo) =>
       todo.id === id
         ? {
@@ -82,9 +82,9 @@ function App() {
 
   return (
     <Container maxWidth="md">
-        <Toaster/>
+      <Toaster />
       <Box className="app-container">
-        <Inputarea addTodo={addTodo} editingTodo={editingTodo} />
+        <InputArea addTodo={addTodo} editingTodo={editingTodo} />
         <Box className="content-wrapper">
           <Todos
             todos={todos.filter(todo => !todo.completed)}
@@ -93,7 +93,7 @@ function App() {
             markCompleted={markCompleted}
           />
           <Complete completedTodos={todos.filter(todo => todo.completed)}
-            moveBackToTodo={moveBackToTodo}
+            movebackToTodo={movebackToTodo}
           />
         </Box>
       </Box>
